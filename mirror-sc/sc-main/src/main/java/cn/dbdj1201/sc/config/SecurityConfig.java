@@ -101,7 +101,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         };
     }
 
-
     @Bean
     public JwtAuthenticationFilter jwtAuthenticationTokenFilter() {
         return new JwtAuthenticationFilter();

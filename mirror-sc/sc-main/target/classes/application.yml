@@ -42,6 +42,9 @@ redis:
 #jwt 参数配置
 jwt:
   #密钥
-  secret:
+  secret: dbdj1201&yz1201
   #有效时间
-  expiration:
+  expiration: 1800
+  #token header
+  tokenHeader: Authenzation
+  tokenHead:
