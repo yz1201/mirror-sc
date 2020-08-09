@@ -1,0 +1,26 @@
+<component name="libraryTable">
+  <library name="Maven: com.baomidou:mybatis-plus-extension:3.2.0">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/baomidou/mybatis-plus-extension/3.2.0/mybatis-plus-extension-3.2.0.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/baomidou/mybatis-plus-extension/3.2.0/mybatis-plus-extension-3.2.0-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/baomidou/mybatis-plus-extension/3.2.0/mybatis-plus-extension-3.2.0-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../dwonloads/mybatis-plus-3.0.zip!/" />
+      <root url="jar://$PROJECT_DIR$/../dwonloads/mybatis-plus-3.0.zip!/mybatis-plus-3.0/mybatis-plus-annotation/src/main/java" />
+      <root url="jar://$PROJECT_DIR$/../dwonloads/mybatis-plus-3.0.zip!/mybatis-plus-3.0/mybatis-plus-boot-starter-test/src/main/java" />
+      <root url="jar://$PROJECT_DIR$/../dwonloads/mybatis-plus-3.0.zip!/mybatis-plus-3.0/mybatis-plus-boot-starter-test/src/test/java" />
+      <root url="jar://$PROJECT_DIR$/../dwonloads/mybatis-plus-3.0.zip!/mybatis-plus-3.0/mybatis-plus-boot-starter/src/main/java" />
+      <root url="jar://$PROJECT_DIR$/../dwonloads/mybatis-plus-3.0.zip!/mybatis-plus-3.0/mybatis-plus-boot-starter/src/test/java" />
+      <root url="jar://$PROJECT_DIR$/../dwonloads/mybatis-plus-3.0.zip!/mybatis-plus-3.0/mybatis-plus-core/src/main/java" />
+      <root url="jar://$PROJECT_DIR$/../dwonloads/mybatis-plus-3.0.zip!/mybatis-plus-3.0/mybatis-plus-core/src/test/java" />
+      <root url="jar://$PROJECT_DIR$/../dwonloads/mybatis-plus-3.0.zip!/mybatis-plus-3.0/mybatis-plus-extension/src/main/java" />
+      <root url="jar://$PROJECT_DIR$/../dwonloads/mybatis-plus-3.0.zip!/mybatis-plus-3.0/mybatis-plus-extension/src/test/java" />
+      <root url="jar://$PROJECT_DIR$/../dwonloads/mybatis-plus-3.0.zip!/mybatis-plus-3.0/mybatis-plus-generator/src/main/java" />
+      <root url="jar://$PROJECT_DIR$/../dwonloads/mybatis-plus-3.0.zip!/mybatis-plus-3.0/mybatis-plus-generator/src/test/java" />
+      <root url="jar://$PROJECT_DIR$/../dwonloads/mybatis-plus-3.0.zip!/mybatis-plus-3.0/mybatis-plus/src/test/java" />
+    </SOURCES>
+  </library>
+</component>
