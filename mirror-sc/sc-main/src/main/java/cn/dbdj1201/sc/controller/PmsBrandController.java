@@ -11,6 +11,7 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -34,6 +35,7 @@ public class PmsBrandController {
 
     @ApiOperation("获取所有品牌列表")
     @GetMapping("listAll")
+    @PreAuthorize("hasAuthority('pms:brand:read')")
     public CommonResult<List<PmsBrand>> findAllBrands() {
         log.info("查询所有品牌");
         return CommonResult.success(pmsBrandService.list());
@@ -41,6 +43,7 @@ public class PmsBrandController {
 
     @ApiOperation(("新增品牌"))
     @PostMapping("/create")
+    @PreAuthorize("hasAuthority('pms:brand:create')")
     public CommonResult<PmsBrand> createBrand(@RequestBody PmsBrand pmsBrand) {
         log.info("create brand");
         boolean saveResult = this.pmsBrandService.save(pmsBrand);
@@ -54,6 +57,7 @@ public class PmsBrandController {
 
     @ApiOperation(("根据ID删除某品牌"))
     @PostMapping("/delete/{id}")
+    @PreAuthorize("hasAuthority('pms:brand:delete')")
     public CommonResult<PmsBrand> deleteBrand(@PathVariable Long id) {
         PmsBrand delBrand = this.pmsBrandService.getById(id);
         if (delBrand == null) {
@@ -71,7 +75,8 @@ public class PmsBrandController {
 
     @ApiOperation(("根据id查询品牌"))
     @GetMapping("{id}")
-    public CommonResult<PmsBrand> getBrand(@PathVariable Long id) {
+    @PreAuthorize("hasAuthority('pms:brand:read')")
+    public CommonResult<PmsBrand> findBrandById(@PathVariable Long id) {
         log.info("查询id为{}的品牌", id);
         PmsBrand brand = this.pmsBrandService.getById(id);
         if (brand != null) {
@@ -83,6 +88,7 @@ public class PmsBrandController {
 
     @ApiOperation(("修改品牌信息"))
     @PostMapping("/update/{id}")
+    @PreAuthorize("hasAuthority('pms:brand:update')")
     public CommonResult<PmsBrand> modifyBrandInfo(@RequestBody PmsBrand pmsBrandDto, @PathVariable Long id) {
         CommonResult<PmsBrand> commonResult;
         log.info("根据id更新品牌");
@@ -99,6 +105,7 @@ public class PmsBrandController {
 
     @ApiOperation(("分页查询"))
     @GetMapping("/list")
+    @PreAuthorize("hasAuthority('pms:brand:read')")
     public CommonResult<IPage<PmsBrand>> listBrandByPage(
             @RequestParam(defaultValue = "1", value = "currentPage", required = false) Integer currentPage,
             @RequestParam(value = "pageSize", defaultValue = "3", required = false) Integer pageSize

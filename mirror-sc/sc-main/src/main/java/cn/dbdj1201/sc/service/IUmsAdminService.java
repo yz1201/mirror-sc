@@ -1,7 +1,10 @@
 package cn.dbdj1201.sc.service;
 
 import cn.dbdj1201.sc.entity.UmsAdmin;
+import cn.dbdj1201.sc.entity.UmsPermission;
 import com.baomidou.mybatisplus.extension.service.IService;
+
+import java.util.List;
 
 /**
  * <p>
@@ -13,4 +16,9 @@ import com.baomidou.mybatisplus.extension.service.IService;
  */
 public interface IUmsAdminService extends IService<UmsAdmin> {
 
+    List<UmsPermission> getPermissions(Long umsAdminId);
+
+    UmsAdmin register(UmsAdmin umsAdmin);
+
+    String login(String username, String password);
 }

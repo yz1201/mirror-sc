@@ -39,10 +39,9 @@ public class JwtUtils {
      * @return
      */
     private String doGenerateToken(Map<String, Object> claims) {
-
         return Jwts.builder()
-                .setExpiration(generateExpireTime())
                 .setClaims(claims)
+                .setExpiration(generateExpireTime())
                 .signWith(SignatureAlgorithm.HS512, secret)
                 .compact();
     }
@@ -101,6 +100,7 @@ public class JwtUtils {
      * @return true-未失效 false-已失效
      */
     public boolean isTokenExpired(String token) {
+        log.info("校验token是否到期-{}", token);
         Date expireDate = getExpireDateFromToken(token);
         boolean isValid = expireDate.after(new Date());
         if (isValid) {

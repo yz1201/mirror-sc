@@ -46,6 +46,14 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     private RestAuthenticationEntryPoint restAuthenticationEntryPoint;
 
 
+    private static final String[] AUTH_WHITELIST = {
+            // -- swagger ui
+            "/swagger-resources/**",
+            "/swagger-ui.html",
+            "/v2/api-docs/**",
+            "/webjars/**"
+    };
+
     @Override
     protected void configure(HttpSecurity security) throws Exception {
         security.csrf()
@@ -57,13 +65,14 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 //允许对网站静态资源的无授权访问
                 .antMatchers(HttpMethod.GET,
                         "/", "/*.html", "/favicon.ico", "/**/*.html"
-                        , "/**/*.css", "/**/*.js", "swagger-resources/**", "v2/api-docs/**").permitAll()
+                        , "/**/*.css", "/**/*.js").permitAll()
                 //登录注册放行，允许匿名访问
-                .antMatchers("admin/login", "admin/register").permitAll()
+                .antMatchers(AUTH_WHITELIST).permitAll()
+                .antMatchers("/admin/login", "/admin/register").permitAll()
                 //跨域时会先发一次options请求，放行
                 .antMatchers(HttpMethod.OPTIONS).permitAll()
                 //测试时全部运行访问
-                .antMatchers("/**").permitAll()
+//                .antMatchers("/**").permitAll()
                 //除了上面的都要鉴权认证
                 .anyRequest().authenticated();
         //禁用缓存
@@ -93,9 +102,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         return username -> {
             UmsAdmin admin = umsAdminService.getOne(new QueryWrapper<UmsAdmin>().eq("username", username));
             if (admin != null) {
-//                List<UmsPermission> permissionList = umsAdminService.list();
-//                return new AdminUserDetails(admin,permissionList);
-                return null;
+                List<UmsPermission> permissionList = umsAdminService.getPermissions(admin.getId());
+                return new AdminUserDetails(admin, permissionList);
             }
             throw new UsernameNotFoundException("用户名或密码错误");
         };

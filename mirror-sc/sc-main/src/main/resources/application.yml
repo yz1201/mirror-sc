@@ -30,21 +30,21 @@ spring:
         min-idle: 0 # 连接池中的最小空闲连接
     timeout: 3000ms # 连接超时时间（毫秒）
 mybatis-plus:
-  mapper-locations: classpath*:/mapper/**Mapper.xml
+  mapper-locations: classpath:/mapper/*.xml
 #配置自定义redis key
 redis:
   key:
     prefix:
       authCode: "dbdj1201:sc:authCode:"
     expire:
-      authCode: 60
+      authCode: 1800
 
 #jwt 参数配置
 jwt:
   #密钥
   secret: dbdj1201&yz1201
   #有效时间
-  expiration: 1800
+  expiration: 180000
   #token header
-  tokenHeader: Authenzation
-  tokenHead:
+  tokenHeader: Authorization
+  tokenHead:  dbdj1201

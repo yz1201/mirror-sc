@@ -17,6 +17,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.Enumeration;
 
 /**
  * @Author: dbdj1201
@@ -35,6 +36,7 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
 
     @Value("${jwt.tokenHeader}")
     private String tokenHeader;
+
     @Value("${jwt.tokenHead}")
     private String tokenHead;
 
@@ -42,9 +44,16 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
         log.info("jwt filter work");
-        String authHeader = request.getHeader(this.tokenHead);
-        if (authHeader != null && authHeader.startsWith(this.tokenHead)) {
-            String authToken = authHeader.substring(this.tokenHead.length());
+//        Enumeration<String> headerNames = request.getHeaderNames();
+//        do {
+//            System.out.println(headerNames.nextElement());
+//        } while (headerNames.hasMoreElements());
+        String authToken = request.getHeader(this.tokenHeader);
+        log.info("token-{}", authToken);
+//        if (authToken != null && authHeader.startsWith(this.tokenHead)) {
+        if (authToken != null) {
+//            String authToken = authHeader.substring(this.tokenHead.length());
+
             String username = this.jwtUtils.getUsernameFormToken(authToken);
             log.info("校验用户名-{}", username);
             if (username != null && SecurityContextHolder.getContext().getAuthentication() == null) {
