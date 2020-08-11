@@ -136,6 +136,14 @@
                 <version>${jwt.version}</version>
             </dependency>
 
+            <!---mongodb相关依赖-->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-data-mongodb</artifactId>
+                <version>2.3.2.RELEASE</version>
+            </dependency>
+
+
         </dependencies>
     </dependencyManagement>
 
