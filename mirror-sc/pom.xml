@@ -23,7 +23,7 @@
         <lombok.version>1.18.12</lombok.version>
         <mysql.version>8.0.19</mysql.version>
         <druid.version>1.1.22</druid.version>
-        <springboot.latest.version>2.2.5.RELEASE</springboot.latest.version>
+        <springboot.latest.version>2.3.0.RELEASE</springboot.latest.version>
         <swagger.latest.version>2.9.2</swagger.latest.version>
         <mybatis.spring.boot.version>2.1.2</mybatis.spring.boot.version>
         <jwt.version>0.9.1</jwt.version>
@@ -37,7 +37,7 @@
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-dependencies</artifactId>
-                <version>2.2.5.RELEASE</version>
+                <version>${springboot.latest.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -140,8 +140,48 @@
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-data-mongodb</artifactId>
-                <version>2.3.2.RELEASE</version>
+                <version>${springboot.latest.version}</version>
             </dependency>
+
+            <!--Elasticsearch相关依赖-->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-data-elasticsearch</artifactId>
+                <version>${springboot.latest.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-validation</artifactId>
+                <version>2.2.6.RELEASE</version>
+            </dependency>
+
+
+
+            <!-- https://mvnrepository.com/artifact/org.elasticsearch.client/transport -->
+<!--            <dependency>-->
+<!--                <groupId>org.elasticsearch.client</groupId>-->
+<!--                <artifactId>transport</artifactId>-->
+<!--                <version>7.6.0</version>-->
+<!--            </dependency>-->
+
+<!--            <dependency>-->
+<!--                <groupId>org.elasticsearch</groupId>-->
+<!--                <artifactId>elasticsearch</artifactId>-->
+<!--                <version>7.6.0</version>-->
+<!--            </dependency>-->
+
+<!--            <dependency>-->
+<!--                <groupId>org.elasticsearch.client</groupId>-->
+<!--                <artifactId>elasticsearch-rest-client</artifactId>-->
+<!--                <version>7.6.0</version>-->
+<!--            </dependency>-->
+
+<!--            <dependency>-->
+<!--                <groupId>org.elasticsearch.client</groupId>-->
+<!--                <artifactId>elasticsearch-rest-high-level-client</artifactId>-->
+<!--                <version>7.6.0</version>-->
+<!--            </dependency>-->
 
 
         </dependencies>

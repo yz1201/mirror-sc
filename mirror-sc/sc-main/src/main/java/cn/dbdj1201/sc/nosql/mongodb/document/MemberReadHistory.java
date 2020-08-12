@@ -38,6 +38,6 @@ public class MemberReadHistory {
     private String productPic;
     private String productSubtitle;
     private String productPrice;
-    private LocalDateTime creatTime;
+    private LocalDateTime createTime;
 
 }

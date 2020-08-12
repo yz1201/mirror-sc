@@ -34,10 +34,15 @@ spring:
     mongodb:
       host: localhost # mongodb的连接地址
       port: 27017 # mongodb的连接端口号
-      database: mall-port # mongodb的连接的数据库
+      database: dbdj1201 # mongodb的连接的数据库
       username: root
       password: root
-
+  #spring data elasticsearch
+  elasticsearch:
+    rest:
+      uris: http://test.com:9200
+#  freemarker:
+#    expose-spring-macro-helpers:
 mybatis-plus:
   mapper-locations: classpath:/mapper/*.xml
 #配置自定义redis key

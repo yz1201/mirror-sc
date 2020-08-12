@@ -38,7 +38,7 @@ public class MemberReadHistoryServiceImpl implements IMemberReadHistoryService {
     public int create(MemberReadHistory memberReadHistory) {
         try {
             memberReadHistory.setId(null);
-            memberReadHistory.setCreatTime(LocalDateTime.now());
+            memberReadHistory.setCreateTime(LocalDateTime.now());
             MemberReadHistory history = this.memberReadHistoryRepository.save(memberReadHistory);
             log.warn("存入mondodb：{}", history);
         } catch (Exception e) {
