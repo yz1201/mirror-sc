@@ -1,5 +1,6 @@
-package cn.dbdj1201.sc.dao;
+package cn.dbdj1201.sc.service.impl;
 
+import cn.dbdj1201.sc.service.IEsProductService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,17 +11,17 @@ import static org.junit.Assert.*;
 
 /**
  * @Author: dbdj1201
- * @Date: 2020-08-12 18:44
+ * @Date: 2020-08-13 10:08
  */
 @SpringBootTest
 @RunWith(SpringRunner.class)
-public class IEsProductDaoTest {
+public class EsProductServiceImplTest {
 
     @Autowired
-    private IEsProductDao productDao;
+    private IEsProductService esProductService;
 
-//    @Test
-//    public void findAllProducts() {
-//        this.productDao.findAllProducts().forEach(System.out::println);
-//    }
+    @Test
+    public void search() {
+        this.esProductService.search("海澜之家",5,5).forEach(System.out::println);
+    }
 }

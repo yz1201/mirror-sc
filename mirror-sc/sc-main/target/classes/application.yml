@@ -40,7 +40,7 @@ spring:
   #spring data elasticsearch
   elasticsearch:
     rest:
-      uris: http://test.com:9200
+      uris: 47.94.4.93:9200
 #  freemarker:
 #    expose-spring-macro-helpers:
 mybatis-plus:

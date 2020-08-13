@@ -6,14 +6,13 @@ import cn.dbdj1201.sc.nosql.elasticsearch.repository.EsProductRepository;
 import cn.dbdj1201.sc.service.IEsProductService;
 import cn.hutool.core.collection.CollUtil;
 import cn.hutool.core.collection.CollectionUtil;
-import cn.hutool.core.util.StrUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
+import java.util.Iterator;
 import java.util.List;
 
 /**
@@ -39,15 +38,16 @@ public class EsProductServiceImpl implements IEsProductService {
     public int generateEsDb() {
         List<EsProduct> allProducts = this.productDao.findAllProducts(null);
         int result = 0;
+        log.info("商品库中库存数量为{}", allProducts.size());
         try {
             if (CollectionUtil.isEmpty(allProducts)) {
                 log.warn("商品库空了？");
                 throw new Exception("完蛋(￣y▽,￣)╭ ");
             }
-
+            log.info("开始创建索引库");
             Iterable<EsProduct> esProducts = this.productRepository.saveAll(allProducts);
-            while (esProducts.iterator().hasNext()) {
-                esProducts.iterator().next();
+            for (EsProduct ignored : esProducts) {
+                log.info("新建完毕，转化结果{}", result);
                 result++;
             }
 //            allProducts.forEach(product -> this.productRepository.save(product));
@@ -97,7 +97,17 @@ public class EsProductServiceImpl implements IEsProductService {
 
     @Override
     public Page<EsProduct> search(String keyword, Integer pageNum, Integer pageSize) {
-        return this.productRepository.findByNameOrSubTitleOrKeywords(keyword, keyword, keyword,
-                PageRequest.of(pageNum, pageSize));
+        log.info("开始搜索{}", keyword);
+        Page<EsProduct> esProductPage;
+        try {
+            //注意spring page分页从0开始，-1安排
+            esProductPage = this.productRepository.findByNameOrSubTitleOrKeywords(keyword, keyword, keyword,
+                    PageRequest.of(pageNum - 1, pageSize));
+            log.info("搜索服务调用结束，符合条件的分页结果集如下{}", esProductPage.getTotalElements());
+        } catch (Exception e) {
+            log.warn("没搜到?-{}", e.getMessage());
+            return null;
+        }
+        return esProductPage;
     }
 }
