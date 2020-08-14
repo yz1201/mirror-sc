@@ -24,8 +24,7 @@ public class OmsPortalOrderServiceImpl implements IOmsPortalOrderService {
         log.info("生成订单");
         //下单完成后开启一个延迟消息，用于当用户没有付款时取消订单（orderId应该在下单后生成）
         sendDelayMessageCancelOrder(11L);
-
-        return CommonResult.success(null,"下单成功");
+        return CommonResult.success(null, "下单成功");
     }
 
     @Override
@@ -35,12 +34,14 @@ public class OmsPortalOrderServiceImpl implements IOmsPortalOrderService {
 
     /**
      * 取消订单
+     *
      * @param orderId
      */
     private void sendDelayMessageCancelOrder(Long orderId) {
         //获取订单超时时间，假设为60分钟(测试用的30秒)
         long delayTimes = 30 * 1000;
         //发送延迟消息
+        log.info("发送取消超时订单的消息-{}", orderId);
         cancelOrderSender.sendMessage(orderId, delayTimes);
     }
 }

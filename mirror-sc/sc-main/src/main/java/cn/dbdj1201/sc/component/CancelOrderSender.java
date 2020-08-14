@@ -22,12 +22,15 @@ public class CancelOrderSender {
 
     /**
      * 发送订单取消的延迟消息
+     *
      * @param orderId
      * @param delayTimes
      */
     public void sendMessage(Long orderId, final long delayTimes) {
         this.amqpTemplate.convertAndSend(QueueEnum.QUEUE_TTL_ORDER_CANCEL.getExchange(),
-                QueueEnum.QUEUE_TTL_ORDER_CANCEL.getName(), message -> {
+                QueueEnum.QUEUE_TTL_ORDER_CANCEL.getName(),
+                orderId,
+                message -> {
                     message.getMessageProperties().setExpiration(String.valueOf(delayTimes));
                     return message;
                 });

@@ -1,5 +1,6 @@
 package cn.dbdj1201.sc.component;
 
+import cn.dbdj1201.sc.service.IOmsPortalOrderService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,11 +15,12 @@ import org.springframework.stereotype.Component;
 @Slf4j
 public class CancelOrderReceiver {
 
-//@Autowired
-//private OmsPor
+    @Autowired
+    private IOmsPortalOrderService orderService;
 
     @RabbitListener
-    public void handel(){
-
+    public void handel(Long orderId) {
+        log.info("receive delay message orderId:{}", orderId);
+        this.orderService.cancelOrder(orderId);
     }
 }
