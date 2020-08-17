@@ -8,9 +8,11 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="sc-main" />
+        <module name="ex-java-nio" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="ex-java-nio" target="1.5" />
       <module name="mirror-sc" target="11" />
       <module name="sc-main" target="11" />
     </bytecodeTargetLevel>

@@ -4,6 +4,7 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/mirror-sc/pom.xml" />
+        <option value="$PROJECT_DIR$/mirror-sc/ex-java-nio/pom.xml" />
       </list>
     </option>
   </component>
