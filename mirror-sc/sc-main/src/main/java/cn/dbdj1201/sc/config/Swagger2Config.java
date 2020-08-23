@@ -29,7 +29,7 @@ public class Swagger2Config {
                 .apiInfo(apiInfo())
                 .select()
                 .apis(RequestHandlerSelectors.basePackage("cn.dbdj1201.sc.controller"))
-                .paths(PathSelectors.any())
+//                .paths(PathSelectors.any())
                 .build()
                 //添加登录认证
                 .securitySchemes(securitySchemes())

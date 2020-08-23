@@ -5,6 +5,9 @@
       <list>
         <option value="$PROJECT_DIR$/mirror-sc/pom.xml" />
         <option value="$PROJECT_DIR$/mirror-sc/ex-java-nio/pom.xml" />
+        <option value="$PROJECT_DIR$/mirror-sc/ex-st-starter/pom.xml" />
+        <option value="$PROJECT_DIR$/mirror-sc/dbdj1201-spring-boot-starter/pom.xml" />
+        <option value="$PROJECT_DIR$/mirror-sc/dbdj1201-spring-boot-starter-autoconfigure/pom.xml" />
       </list>
     </option>
   </component>

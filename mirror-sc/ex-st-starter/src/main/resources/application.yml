@@ -1,0 +1,15 @@
+server:
+  port: 40923
+
+spring:
+  application:
+    name: dbdj1201-test
+  banner:
+    location: banner.txt
+#  main:
+#    banner-mode: off
+
+dbdj1201:
+  hello:
+    prefix: good-morning
+    suffix: good-evening

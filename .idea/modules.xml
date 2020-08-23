@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/mirror-sc/dbdj1201-spring-boot-starter/dbdj1201-spring-boot-starter.iml" filepath="$PROJECT_DIR$/mirror-sc/dbdj1201-spring-boot-starter/dbdj1201-spring-boot-starter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mirror-sc/dbdj1201-spring-boot-starter-autoconfigure/dbdj1201-spring-boot-starter-autoconfigure.iml" filepath="$PROJECT_DIR$/mirror-sc/dbdj1201-spring-boot-starter-autoconfigure/dbdj1201-spring-boot-starter-autoconfigure.iml" />
       <module fileurl="file://$PROJECT_DIR$/mirror-sc/ex-java-nio/ex-java-nio.iml" filepath="$PROJECT_DIR$/mirror-sc/ex-java-nio/ex-java-nio.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mirror-sc/ex-st-starter/ex-st-starter.iml" filepath="$PROJECT_DIR$/mirror-sc/ex-st-starter/ex-st-starter.iml" />
       <module fileurl="file://$PROJECT_DIR$/mirror-sc/mirror-sc.iml" filepath="$PROJECT_DIR$/mirror-sc/mirror-sc.iml" />
       <module fileurl="file://$PROJECT_DIR$/mirror-sc/sc-main/sc-main.iml" filepath="$PROJECT_DIR$/mirror-sc/sc-main/sc-main.iml" />
     </modules>
