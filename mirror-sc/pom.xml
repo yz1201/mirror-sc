@@ -9,6 +9,7 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>sc-main</module>
+        <module>exam-1</module>
     </modules>
 
 

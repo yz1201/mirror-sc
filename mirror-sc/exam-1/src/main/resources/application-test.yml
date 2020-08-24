@@ -1,0 +1,12 @@
+server:
+  port: 40924
+spring:
+  application:
+    name: examination
+  #数据源配置
+  datasource:
+    url: jdbc:mysql:///db_test?useSSL=false&useUnicode=true&characterEncoding=UTF8&serverTimezone=GMT&allowPublicKeyRetrieval=true
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
