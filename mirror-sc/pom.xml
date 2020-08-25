@@ -10,8 +10,9 @@
     <modules>
         <module>sc-main</module>
         <module>exam-1</module>
+        <module>service-provider</module>
+        <module>service-consumer</module>
     </modules>
-
 
     <packaging>pom</packaging>
     <!--统一管理jar包版本-->

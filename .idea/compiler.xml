@@ -7,12 +7,14 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="ex-st-starter" />
-        <module name="exam-1" />
-        <module name="ex-java-nio" />
-        <module name="dbdj1201-spring-boot-starter-autoconfigure" />
-        <module name="sc-main" />
         <module name="dbdj1201-spring-boot-starter" />
+        <module name="sc-main" />
+        <module name="ex-java-nio" />
+        <module name="exam-1" />
+        <module name="service-consumer" />
+        <module name="ex-st-starter" />
+        <module name="service-provider" />
+        <module name="dbdj1201-spring-boot-starter-autoconfigure" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -23,6 +25,8 @@
       <module name="exam-1" target="11" />
       <module name="mirror-sc" target="11" />
       <module name="sc-main" target="11" />
+      <module name="service-consumer" target="11" />
+      <module name="service-provider" target="11" />
     </bytecodeTargetLevel>
   </component>
 </project>

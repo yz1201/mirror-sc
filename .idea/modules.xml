@@ -9,6 +9,8 @@
       <module fileurl="file://$PROJECT_DIR$/mirror-sc/exam-1/exam-1.iml" filepath="$PROJECT_DIR$/mirror-sc/exam-1/exam-1.iml" />
       <module fileurl="file://$PROJECT_DIR$/mirror-sc/mirror-sc.iml" filepath="$PROJECT_DIR$/mirror-sc/mirror-sc.iml" />
       <module fileurl="file://$PROJECT_DIR$/mirror-sc/sc-main/sc-main.iml" filepath="$PROJECT_DIR$/mirror-sc/sc-main/sc-main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mirror-sc/service-consumer/service-consumer.iml" filepath="$PROJECT_DIR$/mirror-sc/service-consumer/service-consumer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mirror-sc/service-provider/service-provider.iml" filepath="$PROJECT_DIR$/mirror-sc/service-provider/service-provider.iml" />
     </modules>
   </component>
 </project>
