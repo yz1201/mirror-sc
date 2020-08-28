@@ -9,11 +9,18 @@
     <version>1.0-SNAPSHOT</version>
 
     <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compile.source>11</maven.compile.source>
         <maven.compile.target>11</maven.compile.target>
     </properties>
 
     <dependencies>
+
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.9</version>
+        </dependency>
 
         <dependency>
             <groupId>cn.hutool</groupId>
