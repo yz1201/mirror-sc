@@ -10,14 +10,16 @@
         <module name="dbdj1201-spring-boot-starter" />
         <module name="sc-main" />
         <module name="ex-java-nio" />
-        <module name="exam-1" />
         <module name="service-consumer" />
         <module name="ex-st-starter" />
+        <module name="book-mark-resolver" />
         <module name="service-provider" />
+        <module name="exam-1" />
         <module name="dbdj1201-spring-boot-starter-autoconfigure" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="book-mark-resolver" target="11" />
       <module name="dbdj1201-spring-boot-starter" target="11" />
       <module name="dbdj1201-spring-boot-starter-autoconfigure" target="11" />
       <module name="ex-java-nio" target="1.5" />

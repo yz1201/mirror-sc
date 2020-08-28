@@ -8,5 +8,9 @@ public class Base {
 
     public static void main(String[] args) {
 
+        synchronized (Base.class) {
+            int a = 10;
+        }
+
     }
 }

@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding" native2AsciiForPropertiesFiles="true" defaultCharsetForPropertiesFiles="UTF-8">
+    <file url="file://$PROJECT_DIR$/mirror-sc/book-mark-resolver/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mirror-sc/book-mark-resolver/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mirror-sc/dbdj1201-spring-boot-starter/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mirror-sc/dbdj1201-spring-boot-starter/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mirror-sc/ex-java-nio/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mirror-sc/ex-java-nio/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mirror-sc/ex-st-starter/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mirror-sc/ex-st-starter/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mirror-sc/exam-1/src/main/java" charset="UTF-8" />
