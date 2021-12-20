@@ -14,6 +14,7 @@ public interface IOmsPortalOrderService {
 
     /**
      * 生成订单
+     *
      * @param orderParam
      * @return
      */
@@ -22,6 +23,7 @@ public interface IOmsPortalOrderService {
 
     /**
      * 取消单个超时订单
+     *
      * @param orderId
      */
     @Transactional

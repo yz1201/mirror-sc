@@ -27,11 +27,11 @@ public class EsProductServiceImplTest {
 
     @Test
     public void search() {
-        this.esProductService.search("海澜之家",5,5).forEach(System.out::println);
+        this.esProductService.search("海澜之家", 5, 5).forEach(System.out::println);
     }
 
     @Test
-    public void test(){
+    public void test() {
         InputStream bookmarks = EsProductServiceImplTest.class.getClassLoader().getResourceAsStream("Bookmarks");
         StringBuilder sb = new StringBuilder();
 

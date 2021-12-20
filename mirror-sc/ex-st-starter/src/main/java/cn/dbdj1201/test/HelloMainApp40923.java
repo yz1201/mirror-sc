@@ -14,8 +14,13 @@ public class HelloMainApp40923 {
 
     public static void main(String[] args) {
         SpringApplication app = new SpringApplication(HelloMainApp40923.class);
-//        app.setBanner(new IBanner()); // 自定义的Banner
-//        app.setBannerMode(Banner.Mode.CONSOLE); // 在控制台打印横幅
+        app.setBanner(new IBanner()); // 自定义的Banner
+        app.setBannerMode(Banner.Mode.CONSOLE); // 在控制台打印横幅
         app.run(args);
+
+
+//        String s = "";
+//        System.out.println(s.substring(0,0));
+
     }
 }

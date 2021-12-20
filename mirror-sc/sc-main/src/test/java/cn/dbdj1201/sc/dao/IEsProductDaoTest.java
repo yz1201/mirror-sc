@@ -29,7 +29,7 @@ public class IEsProductDaoTest {
 
 
     @Test
-    public void test(){
+    public void test() {
 //        SqlSessionFactoryBuilder builder = new SqlSessionFactoryBuilder();
 //        builder.b
     }

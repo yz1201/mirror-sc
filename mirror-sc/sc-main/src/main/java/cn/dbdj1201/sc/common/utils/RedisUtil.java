@@ -505,7 +505,7 @@ public class RedisUtil {
     /**
      * 将list放入缓存
      *
-     * @param key   键
+     * @param key    键
      * @param values 值
      * @return
      */

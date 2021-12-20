@@ -18,18 +18,19 @@
     <select id="getPermissions" resultMap="BaseResultMap">
 
         SELECT
-	*
-FROM
-	ums_permission
-WHERE
-	id IN (
-SELECT
-	t2.permission_id
-FROM
-	ums_role_permission_relation t2
-WHERE
-	role_id IN ( SELECT t1.id FROM ums_role t1 WHERE id IN ( SELECT role_id FROM ums_admin_role_relation WHERE admin_id = #{umsAdminId} ) )
-	);
+        *
+        FROM
+        ums_permission
+        WHERE
+        id IN (
+        SELECT
+        t2.permission_id
+        FROM
+        ums_role_permission_relation t2
+        WHERE
+        role_id IN ( SELECT t1.id FROM ums_role t1 WHERE id IN ( SELECT role_id FROM ums_admin_role_relation WHERE
+        admin_id = #{umsAdminId} ) )
+        );
 
     </select>
 

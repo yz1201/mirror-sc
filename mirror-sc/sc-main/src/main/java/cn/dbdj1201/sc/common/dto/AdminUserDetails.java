@@ -31,6 +31,7 @@ public class AdminUserDetails implements UserDetails {
 
     /**
      * 返回当前用户持有的权限
+     *
      * @return
      */
     @Override

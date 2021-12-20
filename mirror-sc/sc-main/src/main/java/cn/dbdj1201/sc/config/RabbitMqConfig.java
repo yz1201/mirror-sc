@@ -14,6 +14,7 @@ public class RabbitMqConfig {
 
     /**
      * 订单消息实际消费队列所要绑定的交换机
+     *
      * @return
      */
     @Bean
@@ -26,6 +27,7 @@ public class RabbitMqConfig {
 
     /**
      * 订单延迟队列会绑定的交换机
+     *
      * @return
      */
     @Bean
@@ -38,6 +40,7 @@ public class RabbitMqConfig {
 
     /**
      * 订单实际消费队列
+     *
      * @return
      */
     @Bean
@@ -47,6 +50,7 @@ public class RabbitMqConfig {
 
     /**
      * 订单延迟队列-死信队列，注：AMQP0.9.1协议中规定死信队列需有出口。
+     *
      * @return
      */
     @Bean
@@ -60,6 +64,7 @@ public class RabbitMqConfig {
 
     /**
      * 绑定订单队列到交换机
+     *
      * @param orderDirect
      * @param orderQueue
      * @return
@@ -74,6 +79,7 @@ public class RabbitMqConfig {
 
     /**
      * 绑定订单延迟队列到交换机
+     *
      * @param orderTtlDirect
      * @param orderTtlQueue
      * @return

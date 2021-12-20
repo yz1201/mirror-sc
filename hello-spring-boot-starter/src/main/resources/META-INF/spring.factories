@@ -1,0 +1,2 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+cn.dbdj1201.hellospringbootstarter.config.TestServiceAutoConfiguration

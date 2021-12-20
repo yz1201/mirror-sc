@@ -20,7 +20,7 @@ import java.io.Serializable;
 @Data
 @EqualsAndHashCode(callSuper = false)
 @Accessors(chain = true)
-@ApiModel(value="TbPatient运输对象")
+@ApiModel(value = "TbPatient运输对象")
 public class PatientDto implements Serializable {
 
     private static final long serialVersionUID = 1L;

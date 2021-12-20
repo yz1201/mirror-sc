@@ -14,7 +14,7 @@ import java.util.Map;
  * @Date: 2020-08-09 9:50
  */
 @Configuration
-@MapperScan({"cn.dbdj1201.sc.mapper","cn.dbdj1201.sc.dao"})
+@MapperScan({"cn.dbdj1201.sc.mapper", "cn.dbdj1201.sc.dao"})
 public class MybatisPlusConfig {
 
     /**

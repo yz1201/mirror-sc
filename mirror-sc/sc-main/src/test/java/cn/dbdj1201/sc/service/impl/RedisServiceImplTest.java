@@ -25,6 +25,6 @@ public class RedisServiceImplTest {
     public void set() {
 //        redisService.set("test","test");
 
-        redisService.expire("test",120);
+        redisService.expire("test", 120);
     }
 }

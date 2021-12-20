@@ -66,7 +66,7 @@ public class TbPatientController {
         List<PatientDto> patientDtos = list.stream().map(patient -> {
             TbDept dept = this.deptService.getOne(new QueryWrapper<TbDept>().eq("id", patient.getDeptId()));
             PatientDto patientDto = new PatientDto();
-            BeanUtil.copyProperties(patient,patientDto,"deptId");
+            BeanUtil.copyProperties(patient, patientDto, "deptId");
             patientDto.setDeptName(dept.getName());
             return patientDto;
         }).collect(Collectors.toList());
@@ -80,15 +80,15 @@ public class TbPatientController {
 
     @GetMapping("/find")
     @ApiOperation("根据名称模糊查询")
-    public CommonResult<PatientDto> findPatientByName(@RequestParam String name){
+    public CommonResult<PatientDto> findPatientByName(@RequestParam String name) {
         TbPatient one = this.patientService.getOne(new QueryWrapper<TbPatient>().like("name", name));
-        if (one==null){
+        if (one == null) {
             return CommonResult.failed("查无此人");
         }
 
         TbDept dept = this.deptService.getOne(new QueryWrapper<TbDept>().eq("id", one.getDeptId()));
         PatientDto patientDto = new PatientDto();
-        BeanUtil.copyProperties(one,patientDto,"deptId");
+        BeanUtil.copyProperties(one, patientDto, "deptId");
         PatientDto dto = patientDto.setDeptName(dept.getName());
         return CommonResult.success(dto);
     }
